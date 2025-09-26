@@ -6,7 +6,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onButtonClick }) => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center text-center bg-cover bg-center" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1554189097-94d3a2144d93?q=80&w=1920&auto=format&fit=crop')` }}>
+    <section className="relative min-h-screen flex items-center justify-center text-center bg-cover bg-center" style={{ backgroundImage: `url('/Gemini_Generated_Image_emnuowemnuowemnu.png')` }}>
       <div className="absolute inset-0 bg-white bg-opacity-60"></div>
       <div className="relative z-10 px-6">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-black leading-tight mb-4 animate-fade-in-down">
