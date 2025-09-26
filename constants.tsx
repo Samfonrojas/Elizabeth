@@ -1,13 +1,13 @@
 import React from 'react';
 import type { Metal } from './types';
-import { GoldIcon, CopperIcon, DiamondIcon, RhodiumIcon, ColtanIcon, CassiteriteIcon } from './components/icons/MetalIcons';
+import { CopperIcon, DiamondIcon, RhodiumIcon, ColtanIcon, CassiteriteIcon } from './components/icons/MetalIcons';
 
 export const METALS: Metal[] = [
   {
     symbol: 'Au',
     name: 'Oro',
     description: 'El metal precioso por excelencia, una reserva de valor global y símbolo de riqueza.',
-    icon: <GoldIcon />,
+    icon: <img src="/Gemini_Generated_Image_cjz426cjz426cjz4.png" alt="Gold bars" className="w-12 h-12 object-contain" />,
   },
   {
     symbol: 'Rh',
