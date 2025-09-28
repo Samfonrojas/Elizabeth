@@ -14,12 +14,8 @@ const MetalCard: React.FC<MetalCardProps> = ({ metal, onConsultClick }) => {
       
       <div className="relative z-10">
         <div className="flex items-center mb-4">
-          <div className="text-black w-12 h-12">
-            {metal.icon}
-          </div>
-          <div className="ml-4">
+          <div>
             <h3 className="text-2xl font-bold text-black">{metal.name}</h3>
-            <p className="text-sm font-mono text-gray-600">{metal.symbol}</p>
           </div>
         </div>
         <p className="text-gray-700 mb-4 h-20">{metal.description}</p>

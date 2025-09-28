@@ -4,39 +4,39 @@ import { CopperIcon, DiamondIcon, RhodiumIcon, ColtanIcon, CassiteriteIcon } fro
 
 export const METALS: Metal[] = [
   {
-    symbol: 'Au',
+    symbol: '',
     name: 'Oro',
     description: 'El metal precioso por excelencia, una reserva de valor global y símbolo de riqueza.',
-    icon: <img src="/Gemini_Generated_Image_rm7bfcrm7bfcrm7b-removebg-preview.png" alt="Gold bars" className="w-12 h-12 object-contain" />,
+    icon: <></>,
   },
   {
-    symbol: 'Rh',
+    symbol: '',
     name: 'Rodio',
     description: 'Uno de los metales más raros y valiosos del mundo, crucial en catalizadores automotrices.',
-    icon: <RhodiumIcon />,
+    icon: <></>,
   },
   {
-    symbol: 'C',
+    symbol: '',
     name: 'Diamantes',
     description: 'Gemas de dureza y brillo inigualables, símbolos de lujo, eternidad y valor industrial.',
-    icon: <DiamondIcon />,
+    icon: <></>,
   },
   {
-    symbol: '(Nb,Ta)₂O₅',
+    symbol: '',
     name: 'Coltán',
     description: 'Mineral metálico raro, esencial para la fabricación de dispositivos electrónicos modernos.',
-    icon: <ColtanIcon />,
+    icon: <></>,
   },
   {
-    symbol: 'Cu',
+    symbol: '',
     name: 'Cobre',
     description: 'Conductor eléctrico y térmico excepcional, fundamental para la industria global.',
-    icon: <CopperIcon />,
+    icon: <></>,
   },
   {
-    symbol: 'SnO₂',
+    symbol: '',
     name: 'Casiterita',
     description: 'La principal mena de estaño, vital para aleaciones, soldaduras y la industria conservera.',
-    icon: <CassiteriteIcon />,
+    icon: <></>,
   },
 ];
