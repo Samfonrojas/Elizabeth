@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 type FormStatus = 'idle' | 'sending' | 'success' | 'error';
 
 const Contact: React.FC = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -27,15 +29,15 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-50" id="contact">
+    <section className="py-20 bg-gray-50" id="contact" ref={ref}>
       <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
+        <div className={`text-center mb-12 transition-all duration-800 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-4xl font-bold text-black">Contáctenos</h2>
           <p className="text-gray-600 mt-2">Inicie su consulta y un especialista se pondrá en contacto con usted.</p>
           <div className="w-24 h-1 bg-black mx-auto mt-4"></div>
         </div>
 
-        <div className="max-w-2xl mx-auto">
+        <div className={`max-w-2xl mx-auto transition-all duration-800 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`} style={{ animationDelay: '0.2s' }}>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
@@ -44,7 +46,7 @@ const Contact: React.FC = () => {
                 id="name" 
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full bg-white border border-gray-300 rounded-md py-2 px-3 text-black focus:outline-none focus:ring-2 focus:ring-black transition-all"
+                className="w-full bg-white border border-gray-300 rounded-md py-2 px-3 text-black focus:outline-none focus:ring-2 focus:ring-black transition-all duration-300 hover:border-gray-400 focus:scale-105"
                 required
               />
             </div>
@@ -55,7 +57,7 @@ const Contact: React.FC = () => {
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full bg-white border border-gray-300 rounded-md py-2 px-3 text-black focus:outline-none focus:ring-2 focus:ring-black transition-all"
+                className="w-full bg-white border border-gray-300 rounded-md py-2 px-3 text-black focus:outline-none focus:ring-2 focus:ring-black transition-all duration-300 hover:border-gray-400 focus:scale-105"
                 required
               />
             </div>
@@ -66,7 +68,7 @@ const Contact: React.FC = () => {
                 rows={5}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="w-full bg-white border border-gray-300 rounded-md py-2 px-3 text-black focus:outline-none focus:ring-2 focus:ring-black transition-all"
+                className="w-full bg-white border border-gray-300 rounded-md py-2 px-3 text-black focus:outline-none focus:ring-2 focus:ring-black transition-all duration-300 hover:border-gray-400 focus:scale-105"
                 required
               ></textarea>
             </div>
@@ -74,7 +76,7 @@ const Contact: React.FC = () => {
               <button 
                 type="submit" 
                 disabled={status === 'sending'}
-                className="bg-black text-white font-bold py-3 px-8 rounded-sm hover:bg-gray-800 disabled:bg-gray-400 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105"
+                className="bg-black text-white font-bold py-3 px-8 rounded-sm hover:bg-gray-800 disabled:bg-gray-400 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-110 hover:shadow-xl active:scale-95"
               >
                 {status === 'sending' ? 'Enviando...' : 'Enviar Mensaje'}
               </button>

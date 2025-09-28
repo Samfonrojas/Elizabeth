@@ -12,20 +12,20 @@ const Hero: React.FC<HeroProps> = ({ onButtonClick }) => {
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-black leading-tight mb-4 animate-fade-in-down">
           Invierta en <span className="text-black">Valor</span>.
         </h1>
-        <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-black leading-tight mb-8 animate-fade-in-up">
+        <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-black leading-tight mb-8 animate-fade-in-up stagger-2">
           Invierta en <span className="text-black">Futuro</span>.
         </h2>
-        <p className="text-lg md:text-xl text-gray-800 max-w-2xl mx-auto mb-10">
+        <p className="text-lg md:text-xl text-gray-800 max-w-2xl mx-auto mb-10 animate-fade-in-up stagger-3">
           Aurea le abre las puertas al mundo de los metales preciosos y minerales estratégicos, pilares de la economía del mañana.
         </p>
         <button
           onClick={onButtonClick}
-          className="bg-black text-white font-bold py-3 px-8 rounded-sm hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-black/20"
+          className="bg-black text-white font-bold py-3 px-8 rounded-sm hover:bg-gray-800 transition-all duration-300 transform hover:scale-110 hover:shadow-xl shadow-lg shadow-black/20 animate-fade-in-up stagger-4 animate-pulse-slow"
         >
           Ver Materiales
         </button>
       </div>
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-float">
          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-black">
             <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
         </svg>
